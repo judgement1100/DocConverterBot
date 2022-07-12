@@ -1,7 +1,6 @@
 import json
 from django import http
-
-from . import tgbot_service
+from .commands_service import tgbot_service
 
 # Create your views here.
 from django.views.decorators.csrf import csrf_exempt
