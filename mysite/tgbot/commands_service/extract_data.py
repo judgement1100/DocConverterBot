@@ -10,3 +10,7 @@ class DataExtractor_class:
     @staticmethod
     def get_message_text(request_body):
         return request_body['message']['text']
+
+    @staticmethod
+    def get_document_file_id(request_body):
+        return request_body['message']['document']['file_id']
