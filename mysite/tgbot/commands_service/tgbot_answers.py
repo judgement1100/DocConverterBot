@@ -1,7 +1,12 @@
-import telepot
+import os.path
+import sys
+from . import tgbot_file_service
 
-token = '5414010081:AAFHzRIjpEJK6UOVn7h_N7xKOMrXMUjxA8Q'
-bot = telepot.Bot(token)
+sys.path.append(f'C:\\Users\\Admin\\PycharmProjects\\DocConverterBot')
+from start import bot
+from zipfile import ZipFile
+
+FileService = tgbot_file_service.FileService_class
 
 
 class Answers_class:
@@ -12,3 +17,7 @@ class Answers_class:
     @staticmethod
     def send_message(chat_id, message_text):
         bot.sendMessage(chat_id, message_text)
+
+    @staticmethod
+    def send_document(chat_id, file_name, zipObj: ZipFile):
+        bot.sendDocument(chat_id, zipObj.open(file_name, mode='r'))

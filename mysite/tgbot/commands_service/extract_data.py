@@ -1,3 +1,6 @@
+import os
+
+
 class DataExtractor_class:
     @staticmethod
     def get_chat_id(request_body):
@@ -12,5 +15,14 @@ class DataExtractor_class:
         return request_body['message']['text']
 
     @staticmethod
-    def get_document_file_id(request_body):
+    def get_file_id(request_body):
         return request_body['message']['document']['file_id']
+
+    @staticmethod
+    def get_file_extension(request_body):
+        file_name = request_body['message']['document']['file_name']
+        return os.path.splitext(file_name)[1]
+
+    @staticmethod
+    def get_file_name(request_body):
+        return request_body['message']['document']['file_name']
