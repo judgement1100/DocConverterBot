@@ -103,5 +103,12 @@ class FileService_class:
         return f'mysite\\tgbot\\commands_service\\downloads\\file.pdf'
 
 
+    @staticmethod
+    def download_sticker(request_body):
+        path = f'mysite\\tgbot\\commands_service\\downloads\\sticker.WEBP'
+        bot.download_file(DataExtractor.get_file_id_sticker(request_body), path)
+        return path
+
+
 
 

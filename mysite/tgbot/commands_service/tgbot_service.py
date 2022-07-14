@@ -63,6 +63,7 @@ def process_document(file_name, file_id, chat_id, new_extension: Extensions):
     except Exception as e:
         print(f'{str(e)}')
         Answers.send_message(chat_id, 'Sorry, some error occured :(')
+        Answers.send_дуля(chat_id)
 
 
 def save_to_json(request_body):
@@ -99,9 +100,13 @@ def find_last_document(user_name):
     return -1
 
 
-def clear_data_file():
+def clean_data_file():
+    with open('mysite\\tgbot\\commands_service\\downloads\\data.json', 'r') as rd:
+        data_list: list = json.load(rd)
+        if len(data_list) > 150:
+            del data_list[:10]
+
     with open('mysite\\tgbot\\commands_service\\downloads\\data.json', 'w') as fp:
-        data_list = []
         json.dump(data_list, fp, indent=4)
 
 
@@ -130,6 +135,7 @@ def need_asking(user_name):
 
 def execute_command(request_body):
     save_to_json(request_body)
+    clean_data_file()
     chat_id = DataExtractor.get_chat_id(request_body)
     user_name = DataExtractor.get_user_name(request_body)
     # Answers.reply_with_buttons(chat_id)

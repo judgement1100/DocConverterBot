@@ -3,7 +3,6 @@ import sys
 from . import tgbot_file_service
 from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 import telepot
-
 sys.path.append(f'C:\\Users\\Admin\\PycharmProjects\\DocConverterBot')
 from start import bot
 from zipfile import ZipFile
@@ -25,8 +24,16 @@ class Answers_class:
         bot.sendDocument(chat_id, zipObj.open(file_name, mode='r'))
 
     @staticmethod
+    def send_дуля(chat_id):
+        zip_path, zipObj = FileService.push_into_zip(f'mysite\\tgbot\\commands_service\\downloads\\дуля.WEBP')
+        Answers_class.send_document(chat_id, 'дуля.WEBP', zipObj)
+        zipObj.close()
+        os.remove(zip_path)
+
+    @staticmethod
     def reply_with_buttons(chat_id):
         bot.sendMessage(chat_id, 'Deleting keyboard', reply_markup=ReplyKeyboardRemove())
 
         # bot.sendMessage(chat_id, 'test', reply_markup=ReplyKeyboardMarkup(keyboard=[[
         #     KeyboardButton(text="/images_to_pdf"), KeyboardButton(text="/convert_document")]]))
+

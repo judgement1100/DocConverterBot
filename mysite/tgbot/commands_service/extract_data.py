@@ -30,3 +30,7 @@ class DataExtractor_class:
     @staticmethod
     def get_message_date(request_body):
         return request_body['message']['date']
+
+    @staticmethod
+    def get_file_id_sticker(request_body):
+        return request_body['message']['sticker']['file_id']
