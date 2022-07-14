@@ -150,7 +150,6 @@ def execute_command(request_body):
             if DataExtractor.get_message_text(request_body) == '/end':
                 Answers.send_message(chat_id, "Creating pdf...")
 
-
             else:
                 if find_last_command(user_name) == f'/{Extensions.pdf.name}':
                     file_name, file_id = find_last_document(user_name)

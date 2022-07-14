@@ -54,6 +54,6 @@ class FileService_class:
         path = os.path.dirname(file_path)
 
         doc = aw.Document(f'{path}\{row_file_name}' + initial_extension)
-        doc.save(f'{path}\{row_file_name}' + new_extension)
+        doc.save(f'{path}\\{row_file_name}' + new_extension)
 
-        return f'{path}\{row_file_name}' + new_extension
+        return f'{path}\\{row_file_name}' + new_extension
