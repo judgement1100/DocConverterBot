@@ -1,6 +1,8 @@
 import os.path
 import sys
 from . import tgbot_file_service
+from telepot.namedtuple import ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
+import telepot
 
 sys.path.append(f'C:\\Users\\Admin\\PycharmProjects\\DocConverterBot')
 from start import bot
@@ -21,3 +23,10 @@ class Answers_class:
     @staticmethod
     def send_document(chat_id, file_name, zipObj: ZipFile):
         bot.sendDocument(chat_id, zipObj.open(file_name, mode='r'))
+
+    @staticmethod
+    def reply_with_buttons(chat_id):
+        bot.sendMessage(chat_id, 'Deleting keyboard', reply_markup=ReplyKeyboardRemove())
+
+        # bot.sendMessage(chat_id, 'test', reply_markup=ReplyKeyboardMarkup(keyboard=[[
+        #     KeyboardButton(text="/images_to_pdf"), KeyboardButton(text="/convert_document")]]))

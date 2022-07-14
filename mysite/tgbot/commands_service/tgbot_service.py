@@ -132,6 +132,7 @@ def execute_command(request_body):
     save_to_json(request_body)
     chat_id = DataExtractor.get_chat_id(request_body)
     user_name = DataExtractor.get_user_name(request_body)
+    # Answers.reply_with_buttons(chat_id)
 
     if detect_message_type(request_body) == Message_Type.text:
 
@@ -148,7 +149,17 @@ def execute_command(request_body):
         # Secondary commands:
         else:
             if DataExtractor.get_message_text(request_body) == '/end':
+                photos_list = FileService.download_images_from_json(user_name)
                 Answers.send_message(chat_id, "Creating pdf...")
+                pdf_path = FileService.create_pdf_from_images(photos_list)
+                zip_path, zipObj = FileService.push_into_zip(pdf_path)
+                Answers.send_document(chat_id, 'file.pdf', zipObj)
+
+                zipObj.close()
+                os.remove(zip_path)
+                os.remove(pdf_path)
+                for i in range(0, len(photos_list)):
+                    os.remove(photos_list[i])
 
             else:
                 if find_last_command(user_name) == f'/{Extensions.pdf.name}':
