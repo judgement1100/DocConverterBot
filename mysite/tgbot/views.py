@@ -16,5 +16,6 @@ def telegram_webhook(request):
             print(str(e))
 
         return http.HttpResponse('', status=200)
+
     else:
         return http.Http404

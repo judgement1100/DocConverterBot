@@ -26,3 +26,7 @@ class DataExtractor_class:
     @staticmethod
     def get_file_name(request_body):
         return request_body['message']['document']['file_name']
+
+    @staticmethod
+    def get_message_date(request_body):
+        return request_body['message']['date']

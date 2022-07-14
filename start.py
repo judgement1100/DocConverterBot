@@ -1,6 +1,5 @@
 import telepot
 
-
 token = '5414010081:AAFHzRIjpEJK6UOVn7h_N7xKOMrXMUjxA8Q'
 bot = telepot.Bot(token)
 
