@@ -1,6 +1,5 @@
 from . import answers, extract_data, file_service, auxiliary_stuff
 import os
-# sys.path.append(f'C:\\Users\\Admin\\PycharmProjects\\DocConverterBot')
 from start import bot
 
 

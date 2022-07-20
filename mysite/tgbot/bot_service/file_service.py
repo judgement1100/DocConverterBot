@@ -7,7 +7,7 @@ sys.path.append(f'C:\\Users\\Admin\\PycharmProjects\\DocConverterBot')
 from start import bot
 import os
 import json
-from . import auxiliary_stuff, extract_data, answers, common_service
+from . import auxiliary_stuff, extract_data, common_service
 
 
 Extensions = auxiliary_stuff.Extensions

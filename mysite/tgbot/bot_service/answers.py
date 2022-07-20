@@ -1,7 +1,6 @@
 import os.path
 import sys
 from . import file_service
-sys.path.append(f'C:\\Users\\Admin\\PycharmProjects\\DocConverterBot')
 from start import bot
 from zipfile import ZipFile
 from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton

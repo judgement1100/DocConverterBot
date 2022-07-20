@@ -2732,5 +2732,68 @@
             "chat_instance": "7176706877655360921",
             "data": "one"
         }
+    },
+    {
+        "update_id": 887242535,
+        "message": {
+            "message_id": 4463,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1658313841,
+            "text": "a"
+        }
+    },
+    {
+        "update_id": 887242536,
+        "callback_query": {
+            "id": "1698998036290940916",
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "message": {
+                "message_id": 4464,
+                "from": {
+                    "id": 5414010081,
+                    "is_bot": true,
+                    "first_name": "DocConverterBot",
+                    "username": "docConverter_bot"
+                },
+                "chat": {
+                    "id": 395578806,
+                    "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                    "username": "right_blinder",
+                    "type": "private"
+                },
+                "date": 1658313841,
+                "text": "some text",
+                "reply_markup": {
+                    "inline_keyboard": [
+                        [
+                            {
+                                "text": "button1",
+                                "callback_data": "one"
+                            }
+                        ]
+                    ]
+                }
+            },
+            "chat_instance": "7176706877655360921",
+            "data": "one"
+        }
     }
 ]

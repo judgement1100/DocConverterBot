@@ -1,9 +1,5 @@
-import os
-import pprint
-import telepot
 from . import answers, extract_data, file_service, commands_executor, auxiliary_stuff
 import json
-from start import bot
 
 
 Message_Type = auxiliary_stuff.Message_Type
