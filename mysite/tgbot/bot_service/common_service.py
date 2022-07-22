@@ -2,11 +2,13 @@ from . import answers, extract_data, file_service, commands_executor, auxiliary_
 import json
 
 
-Message_Type = auxiliary_stuff.Message_Type
 Answers = answers.Answers_class()
 DataExtractor = extract_data.DataExtractor_class()
 FileService = file_service.FileService_class()
 CommandsExecutor = commands_executor.Commands_executor()
+
+Message_Type = auxiliary_stuff.Message_Type
+KeyboardStatus = auxiliary_stuff.InlineKeyboard_Status
 
 
 def need_asking(user_name):
@@ -36,11 +38,24 @@ def execute_command(request_body):
     chat_id, user_name = DataExtractor.get_chatID_and_username(request_body)
 
     if DataExtractor.detect_message_type(request_body) == Message_Type.text:
-        Answers.reply_with_inline_keyboard(chat_id)
+
+        if DataExtractor.get_message_text(request_body) == '/show_commands':
+            Answers.reply_with_inline_keyboard(chat_id, "Оберіть одну із наступних команд:", KeyboardStatus.initial)
+
+        elif DataExtractor.get_message_text(request_body) == '/start':
+            Answers.reply_with_inline_keyboard(chat_id, "Оберіть одну із наступних команд:", KeyboardStatus.initial)
+
+        elif DataExtractor.get_message_text(request_body) == '/help':
+            Answers.send_help_list(chat_id)
+            Answers.reply_with_inline_keyboard(chat_id, "Оберіть одну із наступних команд:", KeyboardStatus.initial)
+
+    elif DataExtractor.detect_message_type(request_body) == Message_Type.image:
+        if need_asking(user_name):
+            Answers.reply_with_inline_keyboard(chat_id, "Створити pdf?", KeyboardStatus.asking_for_end)
+
+    elif DataExtractor.detect_message_type(request_body) == Message_Type.compressed_image:
+        if need_asking(user_name):
+            Answers.reply_with_inline_keyboard(chat_id, "Виявлено стиснені фото. Створити pdf?", KeyboardStatus.asking_for_end)
 
     elif DataExtractor.detect_message_type(request_body) == Message_Type.callback_query:
         CommandsExecutor.execute_callback(request_body)
-
-
-
-

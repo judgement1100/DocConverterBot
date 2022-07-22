@@ -13,7 +13,10 @@ class DataExtractor_class:
 
 
     def get_user_name(self, request_body):
-        return request_body['message']['from']['username']
+        if self.detect_message_type(request_body) == Message_Type.callback_query:
+            return request_body['callback_query']['from']['username']
+        else:
+            return request_body['message']['from']['username']
 
 
     def get_message_text(self, request_body):
@@ -34,7 +37,10 @@ class DataExtractor_class:
 
 
     def get_message_date(self, request_body):
-        return request_body['message']['date']
+        if self.detect_message_type(request_body) == Message_Type.callback_query:
+            return request_body['callback_query']['message']['date']
+        else:
+            return request_body['message']['date']
 
 
     def get_file_id_sticker(self, request_body):

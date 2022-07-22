@@ -8,6 +8,8 @@ FileService = file_service.FileService_class()
 Answers = answers.Answers_class()
 DataExtractor = extract_data.DataExtractor_class()
 
+KeyboardStatus = auxiliary_stuff.InlineKeyboard_Status
+
 
 class Commands_executor:
 
@@ -124,8 +126,24 @@ class Commands_executor:
 
     def execute_callback(self, request_body):
         query_id = DataExtractor.get_callback_query_id(request_body)
+        chat_id, user_name = DataExtractor.get_chatID_and_username(request_body)
 
-        if DataExtractor.get_callback_data(request_body) == "one":
-            Answers.send_message(DataExtractor.get_chat_id_from_callback(request_body), "it's my life")
+        if DataExtractor.get_callback_data(request_body) == "images_to_pdf":
+            Answers.send_message(chat_id, "Сеанс створення pdf відкрито. Надішліть фото")
+
+        elif DataExtractor.get_callback_data(request_body) == "convert_document":
+            Answers.send_дуля(chat_id)
+
+        elif DataExtractor.get_callback_data(request_body) == "end":
+            Answers.send_message(chat_id, "Створюється pdf...")
+            self.process_creating_pdf_from_images(chat_id, user_name)
+            Answers.reply_with_inline_keyboard(chat_id, "Що робимо далі?", KeyboardStatus.after_end)
+
+        elif DataExtractor.get_callback_data(request_body) == "continue_creating_pdf":
+            Answers.send_message(chat_id, "Сеанс створення pdf продовжено. Надішліть фото")
+
+        elif DataExtractor.get_callback_data(request_body) == "finish_creating_pdf":
+            Answers.send_message(chat_id, "Сеанс створення pdf завершено.")
+            Answers.reply_with_inline_keyboard(chat_id, "Оберіть одну із наступних команд:", KeyboardStatus.initial)
 
         bot.answerCallbackQuery(callback_query_id=query_id)

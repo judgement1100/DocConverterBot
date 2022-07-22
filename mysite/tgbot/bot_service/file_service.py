@@ -13,6 +13,8 @@ from . import auxiliary_stuff, extract_data, common_service
 Extensions = auxiliary_stuff.Extensions
 DataExtractor = extract_data.DataExtractor_class()
 
+Message_Type = auxiliary_stuff.Message_Type
+
 
 class FileService_class:
 
@@ -37,7 +39,7 @@ class FileService_class:
 
     def push_into_zip(self, file_path):
         file_name = basename(file_path)
-        zip_path = f'/mysite/tgbot/bot_service\\downloads\\{os.path.splitext(file_name)[0]}.zip'
+        zip_path = f'mysite\\tgbot\\bot_service\\downloads\\{os.path.splitext(file_name)[0]}.zip'
 
         zipObj = ZipFile(zip_path, 'w')
         zipObj.write(file_path, basename(file_path))
@@ -65,11 +67,12 @@ class FileService_class:
             counter = 1
             for i in range(0, len(data_list)):
                 if DataExtractor.get_user_name(data_list[i]) == user_name:
-                    if common_service.detect_message_type(data_list[i]) == common_service.Message_Type.text:
-                        if DataExtractor.get_message_text(data_list[i]) == '/images_to_pdf':
+                    if DataExtractor.detect_message_type(data_list[i]) == Message_Type.callback_query:
+                        if DataExtractor.get_callback_data(data_list[i]) == 'images_to_pdf' or \
+                                DataExtractor.get_callback_data(data_list[i]) == 'finish_creating_pdf':
                             break
                     else:
-                        if common_service.detect_message_type(data_list[i]) == common_service.Message_Type.image:
+                        if DataExtractor.detect_message_type(data_list[i]) == Message_Type.image:
                             array = data_list[i]['message']['photo']
                             len1 = len(array)
                             dict1: dict = data_list[i]
@@ -79,7 +82,7 @@ class FileService_class:
                             counter += 1
                             photos_list.append(file_path)
                             bot.download_file(file_id, file_path)
-                        elif common_service.detect_message_type(data_list[i]) == common_service.Message_Type.compressed_image:
+                        elif DataExtractor.detect_message_type(data_list[i]) == common_service.Message_Type.compressed_image:
                             file_id = data_list[i]['message']['document']['file_id']
                             file_name = f'image{counter}.jpg'
                             file_path = f'mysite\\tgbot\\bot_service\\downloads\\{file_name}'
