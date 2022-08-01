@@ -38,24 +38,19 @@ def execute_command(request_body):
     chat_id, user_name = DataExtractor.get_chatID_and_username(request_body)
 
     if DataExtractor.detect_message_type(request_body) == Message_Type.text:
-
-        if DataExtractor.get_message_text(request_body) == '/show_commands':
-            Answers.reply_with_inline_keyboard(chat_id, "Оберіть одну із наступних команд:", KeyboardStatus.initial)
-
-        elif DataExtractor.get_message_text(request_body) == '/start':
-            Answers.reply_with_inline_keyboard(chat_id, "Оберіть одну із наступних команд:", KeyboardStatus.initial)
-
-        elif DataExtractor.get_message_text(request_body) == '/help':
-            Answers.send_help_list(chat_id)
-            Answers.reply_with_inline_keyboard(chat_id, "Оберіть одну із наступних команд:", KeyboardStatus.initial)
+        CommandsExecutor.execute_text_command(request_body)
 
     elif DataExtractor.detect_message_type(request_body) == Message_Type.image:
         if need_asking(user_name):
-            Answers.reply_with_inline_keyboard(chat_id, "Створити pdf?", KeyboardStatus.asking_for_end)
+            Answers.send_message(chat_id, 'Натисніть /end для створення pdf файлу')
 
     elif DataExtractor.detect_message_type(request_body) == Message_Type.compressed_image:
         if need_asking(user_name):
-            Answers.reply_with_inline_keyboard(chat_id, "Виявлено стиснені фото. Створити pdf?", KeyboardStatus.asking_for_end)
+            Answers.send_message(chat_id, 'Натисніть /end для створення pdf файлу (виявлені стиснені фото)')
+
+    elif DataExtractor.detect_message_type(request_body) == Message_Type.document:
+        Answers.send_message(chat_id, "Оберіть розширення:\n"
+                                      "/fb2")
 
     elif DataExtractor.detect_message_type(request_body) == Message_Type.callback_query:
         CommandsExecutor.execute_callback(request_body)

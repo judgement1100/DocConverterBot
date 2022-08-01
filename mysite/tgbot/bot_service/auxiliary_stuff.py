@@ -15,15 +15,10 @@ class Message_Type(enum.Enum):
 
 class Extensions(enum.Enum):
 
-    pdf = 1
-    doc = 2
-    txt = 3
-    fb2 = 4
+    fb2 = 1
+    epub = 2
 
 
 class InlineKeyboard_Status(enum.Enum):
 
-    initial = 1
-    asking_for_end = 2
-    asking_for_convertation = 3
     after_end = 4
