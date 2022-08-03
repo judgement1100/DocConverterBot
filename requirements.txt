@@ -1,4 +1,5 @@
 python 3.10.6
+pip
 telepot
 json
 os
