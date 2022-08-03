@@ -1,5 +1,4 @@
 django
-http
 requests
 pip
 telepot
