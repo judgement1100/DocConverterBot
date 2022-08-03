@@ -2,7 +2,6 @@ django
 requests
 pip
 telepot
-json
 os
 sys
 ZipFile
