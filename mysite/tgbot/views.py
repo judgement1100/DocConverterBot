@@ -1,5 +1,5 @@
 import json
-from django import http
+import http
 from .bot_service import common_service
 from start import bot
 
