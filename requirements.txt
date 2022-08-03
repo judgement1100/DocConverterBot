@@ -1,1 +1,10 @@
-python-telegram-bot==12.7
+telepot
+json
+os
+sys
+ZipFile
+PIL
+ebooklib
+bs4
+FB2
+enum
