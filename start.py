@@ -2,7 +2,7 @@ import telepot
 
 token = '5414010081:AAFHzRIjpEJK6UOVn7h_N7xKOMrXMUjxA8Q'
 bot = telepot.Bot(token)
-address = 'https://glacial-shelf-85187.herokuapp.com'
+address = 'https://radiant-beach-29547.herokuapp.com'
 
 bot.deleteWebhook()
 bot.setWebhook(f'{address}/oldman')
