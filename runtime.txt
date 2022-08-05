@@ -1,1 +1,2 @@
 python-3.10.6
+django-0.4.2
