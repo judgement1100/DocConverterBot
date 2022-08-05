@@ -1,2 +1,1 @@
-web: python start.py
-web: python mysite\manage.py runserver 0.0.0.0:80
+worker: python mysite/manage.py runserver 80
