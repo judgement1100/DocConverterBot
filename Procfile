@@ -1,2 +1,1 @@
-worker: ./venv/Scripts/activate
 web: python mysite/manage.py runserver 0.0.0.0:5000
