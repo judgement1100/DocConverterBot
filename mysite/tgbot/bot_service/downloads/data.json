@@ -269,5 +269,33 @@
                 }
             ]
         }
+    },
+    {
+        "update_id": 887243122,
+        "message": {
+            "message_id": 5565,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1659790351,
+            "text": "/help",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        }
     }
 ]
