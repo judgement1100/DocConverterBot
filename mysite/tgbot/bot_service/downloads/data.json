@@ -297,5 +297,313 @@
                 }
             ]
         }
+    },
+    {
+        "update_id": 887243123,
+        "message": {
+            "message_id": 5567,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1659791720,
+            "text": "/help",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887243124,
+        "message": {
+            "message_id": 5568,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1659793994,
+            "text": "/help",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887243125,
+        "message": {
+            "message_id": 5569,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1659794197,
+            "text": "/help",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887243126,
+        "message": {
+            "message_id": 5570,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1659795061,
+            "text": "/help",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887243127,
+        "message": {
+            "message_id": 5571,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1659795256,
+            "text": "/help",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887243128,
+        "message": {
+            "message_id": 5572,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1659795257,
+            "text": "/help",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887243129,
+        "message": {
+            "message_id": 5573,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1659795257,
+            "text": "/help",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887243130,
+        "message": {
+            "message_id": 5574,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1659795258,
+            "text": "/help",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887243131,
+        "message": {
+            "message_id": 5575,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1659795397,
+            "text": "/help",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887243132,
+        "message": {
+            "message_id": 5576,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1659795454,
+            "text": "/help",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887243133,
+        "message": {
+            "message_id": 5587,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1659795557,
+            "text": "/help",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 5,
+                    "type": "bot_command"
+                }
+            ]
+        }
     }
 ]

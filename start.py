@@ -5,4 +5,4 @@ bot = telepot.Bot(token)
 address = 'https://serene-reef-36940.herokuapp.com'
 
 bot.deleteWebhook()
-bot.setWebhook(f'{address}/oldman')
+bot.setWebhook(f'{address}')
