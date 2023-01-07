@@ -1,285 +1,5 @@
 [
     {
-        "update_id": 887242961,
-        "message": {
-            "message_id": 5216,
-            "from": {
-                "id": 395578806,
-                "is_bot": false,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "language_code": "uk"
-            },
-            "chat": {
-                "id": 395578806,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "type": "private"
-            },
-            "date": 1658505627,
-            "text": "/pdf",
-            "entities": [
-                {
-                    "offset": 0,
-                    "length": 4,
-                    "type": "bot_command"
-                }
-            ]
-        }
-    },
-    {
-        "update_id": 887242962,
-        "message": {
-            "message_id": 5219,
-            "from": {
-                "id": 395578806,
-                "is_bot": false,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "language_code": "uk"
-            },
-            "chat": {
-                "id": 395578806,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "type": "private"
-            },
-            "date": 1658505662,
-            "text": "/pdf",
-            "entities": [
-                {
-                    "offset": 0,
-                    "length": 4,
-                    "type": "bot_command"
-                }
-            ]
-        }
-    },
-    {
-        "update_id": 887242963,
-        "message": {
-            "message_id": 5222,
-            "from": {
-                "id": 395578806,
-                "is_bot": false,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "language_code": "uk"
-            },
-            "chat": {
-                "id": 395578806,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "type": "private"
-            },
-            "date": 1658505677,
-            "text": "/pdf",
-            "entities": [
-                {
-                    "offset": 0,
-                    "length": 4,
-                    "type": "bot_command"
-                }
-            ]
-        }
-    },
-    {
-        "update_id": 887242963,
-        "message": {
-            "message_id": 5222,
-            "from": {
-                "id": 395578806,
-                "is_bot": false,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "language_code": "uk"
-            },
-            "chat": {
-                "id": 395578806,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "type": "private"
-            },
-            "date": 1658505677,
-            "text": "/pdf",
-            "entities": [
-                {
-                    "offset": 0,
-                    "length": 4,
-                    "type": "bot_command"
-                }
-            ]
-        }
-    },
-    {
-        "update_id": 887242964,
-        "message": {
-            "message_id": 5230,
-            "from": {
-                "id": 395578806,
-                "is_bot": false,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "language_code": "uk"
-            },
-            "chat": {
-                "id": 395578806,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "type": "private"
-            },
-            "date": 1658505717,
-            "text": "/pdf",
-            "entities": [
-                {
-                    "offset": 0,
-                    "length": 4,
-                    "type": "bot_command"
-                }
-            ]
-        }
-    },
-    {
-        "update_id": 887242965,
-        "message": {
-            "message_id": 5233,
-            "from": {
-                "id": 395578806,
-                "is_bot": false,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "language_code": "uk"
-            },
-            "chat": {
-                "id": 395578806,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "type": "private"
-            },
-            "date": 1658505735,
-            "text": "/pdf",
-            "entities": [
-                {
-                    "offset": 0,
-                    "length": 4,
-                    "type": "bot_command"
-                }
-            ]
-        }
-    },
-    {
-        "update_id": 887242966,
-        "message": {
-            "message_id": 5236,
-            "from": {
-                "id": 395578806,
-                "is_bot": false,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "language_code": "uk"
-            },
-            "chat": {
-                "id": 395578806,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "type": "private"
-            },
-            "date": 1658505758,
-            "text": "/pdf",
-            "entities": [
-                {
-                    "offset": 0,
-                    "length": 4,
-                    "type": "bot_command"
-                }
-            ]
-        }
-    },
-    {
-        "update_id": 887242967,
-        "message": {
-            "message_id": 5239,
-            "from": {
-                "id": 395578806,
-                "is_bot": false,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "language_code": "uk"
-            },
-            "chat": {
-                "id": 395578806,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "type": "private"
-            },
-            "date": 1658505803,
-            "text": "/pdf",
-            "entities": [
-                {
-                    "offset": 0,
-                    "length": 4,
-                    "type": "bot_command"
-                }
-            ]
-        }
-    },
-    {
-        "update_id": 887242968,
-        "message": {
-            "message_id": 5242,
-            "from": {
-                "id": 395578806,
-                "is_bot": false,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "language_code": "uk"
-            },
-            "chat": {
-                "id": 395578806,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "type": "private"
-            },
-            "date": 1658505843,
-            "text": "/pdf",
-            "entities": [
-                {
-                    "offset": 0,
-                    "length": 4,
-                    "type": "bot_command"
-                }
-            ]
-        }
-    },
-    {
-        "update_id": 887242968,
-        "message": {
-            "message_id": 5242,
-            "from": {
-                "id": 395578806,
-                "is_bot": false,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "language_code": "uk"
-            },
-            "chat": {
-                "id": 395578806,
-                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
-                "username": "right_blinder",
-                "type": "private"
-            },
-            "date": 1658505843,
-            "text": "/pdf",
-            "entities": [
-                {
-                    "offset": 0,
-                    "length": 4,
-                    "type": "bot_command"
-                }
-            ]
-        }
-    },
-    {
         "update_id": 887242969,
         "message": {
             "message_id": 5248,
@@ -4436,6 +4156,140 @@
                 "type": "private"
             },
             "date": 1673111618,
+            "text": "/end",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 4,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887244626,
+        "message": {
+            "message_id": 8186,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1673112162,
+            "text": "/end",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 4,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887244627,
+        "message": {
+            "message_id": 8190,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1673112169,
+            "text": "/images_to_pdf",
+            "entities": [
+                {
+                    "offset": 0,
+                    "length": 14,
+                    "type": "bot_command"
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887244628,
+        "message": {
+            "message_id": 8192,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1673112172,
+            "photo": [
+                {
+                    "file_id": "AgACAgIAAxkBAAIgAAFjuaps1Z7H_c3I-itDS-7AV3BzowACncIxGyLz0Umw8CfgVqRf1QEAAwIAA3MAAy0E",
+                    "file_unique_id": "AQADncIxGyLz0Ul4",
+                    "file_size": 1106,
+                    "width": 90,
+                    "height": 51
+                },
+                {
+                    "file_id": "AgACAgIAAxkBAAIgAAFjuaps1Z7H_c3I-itDS-7AV3BzowACncIxGyLz0Umw8CfgVqRf1QEAAwIAA20AAy0E",
+                    "file_unique_id": "AQADncIxGyLz0Uly",
+                    "file_size": 13405,
+                    "width": 320,
+                    "height": 180
+                },
+                {
+                    "file_id": "AgACAgIAAxkBAAIgAAFjuaps1Z7H_c3I-itDS-7AV3BzowACncIxGyLz0Umw8CfgVqRf1QEAAwIAA3gAAy0E",
+                    "file_unique_id": "AQADncIxGyLz0Ul9",
+                    "file_size": 61047,
+                    "width": 800,
+                    "height": 450
+                },
+                {
+                    "file_id": "AgACAgIAAxkBAAIgAAFjuaps1Z7H_c3I-itDS-7AV3BzowACncIxGyLz0Umw8CfgVqRf1QEAAwIAA3kAAy0E",
+                    "file_unique_id": "AQADncIxGyLz0Ul-",
+                    "file_size": 106669,
+                    "width": 1280,
+                    "height": 720
+                }
+            ]
+        }
+    },
+    {
+        "update_id": 887244629,
+        "message": {
+            "message_id": 8194,
+            "from": {
+                "id": 395578806,
+                "is_bot": false,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "language_code": "uk"
+            },
+            "chat": {
+                "id": 395578806,
+                "first_name": "\u0406\u0432\u0430\u043d \ud83c\uddfa\ud83c\udde6",
+                "username": "right_blinder",
+                "type": "private"
+            },
+            "date": 1673112174,
             "text": "/end",
             "entities": [
                 {
