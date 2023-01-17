@@ -92,9 +92,33 @@ class DataExtractor_class:
 
             for i in range(0, len(data_list)):
                 if user_name == self.get_user_name(data_list[i]):
-                    if self.detect_message_type(data_list[i]) == Message_Type.document:
+                    print(data_list[i])
+                    if self.detect_message_type(data_list[i]) == Message_Type.pdf_document:
+                        print('ok')
                         return data_list[i]['message']['document']['file_name'], data_list[i]['message']['document'][
                             'file_id']
+
+        return -1
+
+
+    def is_command(self, text):
+        if '/' in text:
+            return True
+        else:
+            return False
+
+
+    def get_message_text_before_previous(self, user_name):
+        with open('mysite\\tgbot\\bot_service\\downloads\\data.json', 'r') as rd:
+            data_list: list = json.load(rd)
+            data_list.reverse()
+
+            for i in range(0, len(data_list)):
+                if user_name == self.get_user_name(data_list[i]):
+                    if (self.detect_message_type(data_list[i]) == Message_Type.text and
+                        self.is_command(data_list[i]['message']['text'])):
+                        if self.detect_message_type(data_list[i + 1]) == Message_Type.text:
+                            return data_list[i + 1]['message']['text']
 
         return -1
 

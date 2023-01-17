@@ -8,7 +8,6 @@ FileService = file_service.FileService_class()
 CommandsExecutor = commands_executor.Commands_executor()
 
 Message_Type = auxiliary_stuff.Message_Type
-KeyboardStatus = auxiliary_stuff.InlineKeyboard_Status
 
 
 def need_asking(user_name):
@@ -42,15 +41,11 @@ def execute_command(request_body):
 
     elif DataExtractor.detect_message_type(request_body) == Message_Type.image:
         if need_asking(user_name):
-            Answers.send_message(chat_id, 'Натисніть /end для створення pdf файлу')
+            Answers.send_message(chat_id, 'Натисніть /create для завершення сеансу створення pdf файлу')
 
     elif DataExtractor.detect_message_type(request_body) == Message_Type.compressed_image:
         if need_asking(user_name):
-            Answers.send_message(chat_id, 'Натисніть /end для створення pdf файлу (виявлені стиснені фото)')
+            Answers.send_message(chat_id, 'Натисніть /create для створення pdf файлу (виявлені стиснені фото)')
 
-    elif DataExtractor.detect_message_type(request_body) == Message_Type.document:
-        Answers.send_message(chat_id, "Оберіть розширення:\n"
-                                      "/fb2")
-
-    elif DataExtractor.detect_message_type(request_body) == Message_Type.callback_query:
-        CommandsExecutor.execute_callback(request_body)
+    elif DataExtractor.detect_message_type(request_body) == Message_Type.pdf_document:
+        Answers.send_message(chat_id, 'Введіть нову назву файлу')
