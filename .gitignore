@@ -1,11 +1,9 @@
 .idea/
-__pycache__/
+*/__pycache__/*
 venv/
 start.py
 
-mysite/__pycache__/
 mysite/setup/
 mysite/staticfiles/
 
-mysite/tgbot/__pycache__/
 mysite/tgbot/migrations/
