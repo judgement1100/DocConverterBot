@@ -1,3 +1,5 @@
+import telepot
+
 from . import answers, extract_data, file_service, commands_executor, auxiliary_stuff
 import json
 
