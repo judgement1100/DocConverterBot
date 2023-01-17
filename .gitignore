@@ -1,6 +1,7 @@
 .idea/
 __pycache__/
 venv/
+start.py
 
 mysite/__pycache__/
 mysite/setup/
