@@ -81,7 +81,33 @@ class DataExtractor_class:
             for i in range(0, len(data_list)):
                 if user_name == self.get_user_name(data_list[i]):
                     if self.detect_message_type(data_list[i]) is Message_Type.text:
-                        return data_list[i]['message']['text']
+                        if '/' in data_list[i]['message']['text']:
+                            return data_list[i]['message']['text']
+        return 'ERROR'
+
+
+    def find_last_callback(self, user_name):
+        with open('mysite\\tgbot\\bot_service\\downloads\\data.json', 'r') as rd:
+            data_list: list = json.load(rd)
+            data_list.reverse()
+            for i in range(0, len(data_list)):
+                if user_name == self.get_user_name(data_list[i]):
+                    if self.detect_message_type(data_list[i]) is Message_Type.callback_query:
+                        return data_list[i]['callback_query']['data']
+        return 'ERROR'
+
+
+    def find_last_command_or_callback(self, user_name):
+        with open('mysite\\tgbot\\bot_service\\downloads\\data.json', 'r') as rd:
+            data_list: list = json.load(rd)
+            data_list.reverse()
+            for i in range(0, len(data_list)):
+                if user_name == self.get_user_name(data_list[i]):
+                    if self.detect_message_type(data_list[i]) is Message_Type.callback_query:
+                        return data_list[i]['callback_query']['data']
+                    elif self.detect_message_type(data_list[i]) is Message_Type.text:
+                        if '/' in data_list[i]['message']['text']:
+                            return data_list[i]['message']['text']
         return 'ERROR'
 
 
@@ -106,21 +132,6 @@ class DataExtractor_class:
             return True
         else:
             return False
-
-
-    def get_message_text_before_previous(self, user_name):
-        with open('mysite\\tgbot\\bot_service\\downloads\\data.json', 'r') as rd:
-            data_list: list = json.load(rd)
-            data_list.reverse()
-
-            for i in range(0, len(data_list)):
-                if user_name == self.get_user_name(data_list[i]):
-                    if (self.detect_message_type(data_list[i]) == Message_Type.text and
-                        self.is_command(data_list[i]['message']['text'])):
-                        if self.detect_message_type(data_list[i + 1]) == Message_Type.text:
-                            return data_list[i + 1]['message']['text']
-
-        return -1
 
 
     def detect_message_type(self, request_body):

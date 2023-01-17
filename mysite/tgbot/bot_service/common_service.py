@@ -40,14 +40,15 @@ def execute_command(request_body):
 
     if DataExtractor.detect_message_type(request_body) == Message_Type.text:
         CommandsExecutor.execute_text_command(request_body)
-
+    elif DataExtractor.detect_message_type(request_body) == Message_Type.callback_query:
+        CommandsExecutor.execute_callback_command(request_body)
     elif DataExtractor.detect_message_type(request_body) == Message_Type.image:
-        if need_asking(user_name):
-            Answers.send_message(chat_id, 'Натисніть /create для завершення сеансу створення pdf файлу')
+        if DataExtractor.find_last_command(user_name) == '/create_pdf':
+            Answers.inline_keyboard_after_receiving_default_photos(chat_id)
 
-    elif DataExtractor.detect_message_type(request_body) == Message_Type.compressed_image:
-        if need_asking(user_name):
-            Answers.send_message(chat_id, 'Натисніть /create для створення pdf файлу (виявлені стиснені фото)')
 
-    elif DataExtractor.detect_message_type(request_body) == Message_Type.pdf_document:
-        Answers.send_message(chat_id, 'Введіть нову назву файлу')
+
+
+
+
+

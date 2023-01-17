@@ -2,6 +2,7 @@ import os.path
 from . import file_service, extract_data
 from start import bot
 from zipfile import ZipFile
+from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardRemove
 
 FileService = file_service.FileService_class()
 DataExtractor = extract_data.DataExtractor_class()
@@ -28,3 +29,24 @@ class Answers_class:
         bot.sendMessage(chat_id, "Цей бот дозволяє конвертувати зображення у pdf-файл.\n\n"
                                  "Введіть команду /images_to_pdf та робіть усе згідно з наданими інструкціями\n"
                                  "͡° ͜ʖ ͡°")
+
+    # after receiving photos:
+    def inline_keyboard_after_receiving_default_photos(self, chat_id):
+        bot.sendMessage(
+            chat_id,
+            'Як назвати pdf?',
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[[
+                    InlineKeyboardButton(text='Автоматична назва', callback_data='create_new_pdf_with_automatic_name'),
+                    InlineKeyboardButton(text='Назвати файл', callback_data='receiving_pdf_name')
+                ]]
+            )
+        )
+
+
+    def delete_inline_keyboard(self, chat_id, text):
+        bot.sendMessage(
+            chat_id,
+            text,
+            reply_markup=ReplyKeyboardRemove()
+        )
