@@ -21,9 +21,8 @@ class Commands_executor:
 
         elif messageText == '/create_pdf':
             Answers.send_message(chat_id, 'Сеанс створення pdf відкрито. Надішліть фото')
+            Answers.keyboard_while_session_opened(chat_id)
 
-        # elif messageText == '/edit_pdf':
-        #     Answers.send_message(chat_id, "Сеанс створення pdf відкрито. Надішліть фото") #TODO
 
     def execute_callback_command(self, request_body):
         chat_id = DataExtractor.get_chat_id_from_callback(request_body)
