@@ -1,9 +1,10 @@
 import telepot
+import dotenv
 
 # here is dev branch
-token = '5414010081:AAFHzRIjpEJK6UOVn7h_N7xKOMrXMUjxA8Q'
-bot = telepot.Bot(token)
-address = 'https://347e-176-98-31-129.ngrok.io'
+dotenv.load_dotenv()
+bot = telepot.Bot(dotenv.dotenv_values('.env')['TOKEN'])
+address = 'some_address'
 
 bot.deleteWebhook()
 bot.setWebhook(f'{address}/oldman')
