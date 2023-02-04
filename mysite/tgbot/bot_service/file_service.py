@@ -7,12 +7,8 @@ from start import bot
 import os
 import json
 from . import auxiliary_stuff, extract_data, common_service, answers
-from .convertations import epub_to_fb2
-import ebooklib
-from ebooklib import epub
 
 
-Extensions = auxiliary_stuff.Extensions
 DataExtractor = extract_data.DataExtractor_class()
 
 Message_Type = auxiliary_stuff.Message_Type
@@ -70,37 +66,6 @@ class FileService_class:
             print("Error occured in function <process_creating_pdf_from_images>\n" + str(e))
 
 
-    def process_document(self, file_name, file_id, chat_id, prev_extension: Extensions, new_extension: Extensions):
-        Answers = answers.Answers_class()
-        Epub_to_fb2 = epub_to_fb2.Epub_to_fb2()
-
-        try:
-            if new_extension == Extensions.fb2 and prev_extension == Extensions.epub:
-                Answers.send_message(chat_id, f'Опрацьовується документ <{file_name}>. Нове розширення - .fb2')
-
-                file_path = self.download_document(file_id, file_name)
-                new_file_name = os.path.splitext(file_name)[0] + f'.{new_extension.name}'
-                new_file_path = Epub_to_fb2.convert_epub_to_fb2(new_file_name, file_path)
-
-                zip_path, zipObj = self.push_into_zip(new_file_path)
-                Answers.send_document(chat_id, new_file_name, zipObj)
-
-                os.remove(file_path)
-                os.remove(new_file_path)
-                zipObj.close()
-                os.remove(zip_path)
-
-            else:
-                Answers.send_message(chat_id, "Перевірте розширення надісланого файла.")
-
-
-        except Exception as e:
-            print(f'{str(e)}')
-            Answers.send_message(chat_id, 'Виникла помилка :(')
-            Answers.send_дуля(chat_id)
-            os.remove(file_path)
-
-
     def download_images(self, user_name):
         with open('mysite\\tgbot\\bot_service\\downloads\\data.json', 'r') as rd:
             data_list = json.load(rd)
@@ -112,12 +77,10 @@ class FileService_class:
                     if DataExtractor.detect_message_type(data_list[i]) == Message_Type.text:
                         if DataExtractor.get_message_text(data_list[i]) == '/images_to_pdf':
                             break
-                    elif DataExtractor.detect_message_type(data_list[i]) == Message_Type.callback_query:
-                        if DataExtractor.get_callback_data(data_list[i]) == 'finish_creating_pdf' or \
-                                DataExtractor.get_callback_data(data_list[i]) == 'images_to_pdf':
+                        elif DataExtractor.get_message_text(data_list[i]) == '/end_session':
                             break
 
-                    else:
+                    else: #TODO redo following if state. Must be 2 functions.
                         if DataExtractor.detect_message_type(data_list[i]) == Message_Type.image:
                             array = data_list[i]['message']['photo']
                             len1 = len(array)
@@ -152,6 +115,11 @@ class FileService_class:
                            append_images=image_list[1:])
 
         return f'mysite\\tgbot\\bot_service\\downloads\\file.pdf'
+
+
+    def rename_file(self, file_path, new_filename):
+        old_name = os.path.splitext(file_path)[0]
+        os.rename(old_name, new_filename)
 
 
     def download_sticker(self, request_body):
@@ -189,11 +157,3 @@ class FileService_class:
     def set_data(self, data_list: list):
         with open('mysite\\tgbot\\bot_service\\downloads\\data.json', 'w') as fp:
             json.dump(data_list, fp, indent=4)
-
-
-    def get_document_extension(self, file_name):
-        extension: str = os.path.splitext(file_name)[1]
-        extension = extension.replace('.', '')
-        for i in range(1, len(Extensions) + 1):
-            if str(Extensions(i).name) == extension:
-                return Extensions(i)

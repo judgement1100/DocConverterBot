@@ -3,5 +3,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.telegram_webhook)
+    path('oldman', views.telegram_webhook)
 ]

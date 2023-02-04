@@ -1,14 +1,11 @@
 import os.path
-import sys
-from . import file_service, auxiliary_stuff, extract_data
+from . import file_service, extract_data
 from start import bot
 from zipfile import ZipFile
-import telepot
-from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton
+from telepot.namedtuple import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton, ReplyKeyboardRemove
 
 FileService = file_service.FileService_class()
 DataExtractor = extract_data.DataExtractor_class()
-KeyboardStatus = auxiliary_stuff.InlineKeyboard_Status
 
 
 class Answers_class:
@@ -29,30 +26,39 @@ class Answers_class:
 
 
     def send_help_list(self, chat_id):
-        bot.sendMessage(chat_id, "Опис команд:\n"
-                                 "1) /images_to_pdf: конвертація стиснених і нестиснених фотографій у pdf файл.\n"
-                                 "2) /convert_document: конвертація текстових файлів у одне з наступних розширень:\n"
-                                 ".pdf, .doc, .txt, .fb2, .epub, .mobi.\n\n"
-                                 "Порядок виконання дій:\n"
-                                 "1) Оберіть команду серед запропонованих у списку\n"
-                                 "2) Робіть, що вказано в інструкції\n"
-                                 "3) У разі недотримання вказівок існує ймовірність отримати дулю\n"
+        bot.sendMessage(chat_id, "Цей бот дозволяє конвертувати зображення у pdf-файл.\n\n"
+                                 "Введіть команду /images_to_pdf та робіть усе згідно з наданими інструкціями\n"
                                  "͡° ͜ʖ ͡°")
 
 
-    def reply_with_inline_keyboard(self, chat_id, text, keyboardStatus: KeyboardStatus):
-        if keyboardStatus == KeyboardStatus.after_end:
-            bot.sendMessage(chat_id, text,
-                            reply_markup=InlineKeyboardMarkup(
-                                inline_keyboard=[
-                                    [
-                                        InlineKeyboardButton(text='Продовжити створення', callback_data="continue_creating_pdf")
-                                    ],
-                                    [
-                                        InlineKeyboardButton(text='Створити новий pdf', callback_data="images_to_pdf")
-                                    ],
-                                    [
-                                        InlineKeyboardButton(text='Завершити створення pdf', callback_data="finish_creating_pdf")
-                                    ]
-                                ]
-                            ))
+    def keyboard_while_session_opened(self, chat_id):
+        keyboard = ReplyKeyboardMarkup(
+            keyboard=[
+                [KeyboardButton(text="Here text 1"), KeyboardButton(text="Here text 2")]
+            ]
+        )
+        bot.sendMessage(chat_id,
+                        'Hows it going?',
+                        reply_markup=keyboard)
+
+
+    # after receiving photos:
+    def inline_keyboard_after_receiving_default_photos(self, chat_id):
+        bot.sendMessage(
+            chat_id,
+            'Як назвати pdf?',
+            reply_markup=InlineKeyboardMarkup(
+                inline_keyboard=[[
+                    InlineKeyboardButton(text='Автоматична назва', callback_data='create_new_pdf_with_automatic_name'),
+                    InlineKeyboardButton(text='Назвати файл', callback_data='receiving_pdf_name')
+                ]]
+            )
+        )
+
+
+    def delete_inline_keyboard(self, chat_id, text):
+        bot.sendMessage(
+            chat_id,
+            text,
+            reply_markup=ReplyKeyboardRemove()
+        )
